@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Trans Auto NSK</title>
+
+    <style>
+    @media only screen and (min-width: 767px) and (max-width: 1024px){
+    body{
+        width: 100%;
+    }
+    .column .lowTextInfo{
+        padding-left: 150px;
+    }
+    .column .none{
+        padding-left: 26px;
+        
+    }
+}
+@media only screen and (min-width: 411px) and (max-width: 832px){
+    body{
+        width: 100%;
+    }
+    .column .lowTextInfo{
+        text-align: center;
+    }
+    .callTel{
+        font-size: 15px;
+        margin-left: 20px;
+        padding-left: 45px;
+    }
+    .callTel .mail,
+    .phone{
+    background-color: rgb(155, 141, 14);
+    border-radius: 20px;
+    }   
+    .callTel img{
+        margin-left: 35px;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 760px){
+    body{
+        width: 100%;
+    }
+    .column .lowTextInfo{
+        text-align: center;
+    }
+    .callTel{
+        font-size: 15px;
+        margin-left: 20px;
+    }
+    .callTel .mail,
+    .phone{
+    background-color: rgb(155, 141, 14);
+    border-radius: 20px;
+    }   
+    .callTel img{
+        margin-left: 25px;
+    }
+}
+@media only screen and (max-device-width: 992px){
+    nav.navbar .dropdown:hover .dropdown-menu{
+        display: none;
+    }
+}
+nav.navbar .dropdown:hover > .dropdown-menu {
+    display: block; 
+   } 
+
+.navbar{
+    margin-top:45px;
+    background: yellow;
+}
+.nav-link {
+    font-weight: bold;
+    color: rgb(102, 100, 100);
+}
+.nav-item.dropdown a::after{
+    color: black;
+}
+.dropdown a{
+    color: rgb(104, 104, 104);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.dropdown a:hover{
+    color: red;
+    transition: all 0.1s;
+    border:none;
+}
+.dropdown-menu a:hover{
+    color: white;
+    transition: all 0.1s;
+    background-color: rgba(41, 40, 40, 0.822);
+}
+.dropdown a{
+    color: rgb(104, 104, 104);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.dropdown a:hover{
+    color: red;
+    transition: all 0.1s;
+    border:none;
+}
+.dropdown::after{
+    content: '';
+    display: block;
+    width: 100%;
+    background-color: rgb(207, 161, 9);
+    height: 3px;
+    transform: scale(0);
+    transition: all 0.3s;
+}
+.dropdown:hover::after{
+    transform: scale(1);
+}
+.dropdown-menu a:hover{
+    color: white;
+    transition: all 0.1s;
+    background-color: rgba(41, 40, 40, 0.822);
+}
+.navbar-toggler-icon{
+ background-image: url(https://avatars.mds.yandex.net/get-pdb/1927642/f406d2c6-4979-4996-b51d-49cf3fd4b7a8/s1200);
+}
+.dropdown-menu{
+    background: rgba(102, 100, 100);
+}
+.dropdown-menu a{
+    color: white;
+}
+.nav-item{
+    color: rgb(104, 104, 104);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.nav-link{
+    color: rgb(104, 104, 104);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.nav-link:hover{
+    color: red;
+    transition: all 0.1s;
+    border:none;
+    
+}
+.nav-item.dropdown a::after{
+    color: black;
+}
+
+
+.nav-item::after{
+    content: '';
+    display: block;
+    width: 100%;
+    background-color: rgb(207, 161, 9);
+    height: 3px;
+    transform: scale(0);
+    transition: all 0.3s;
+}
+.nav-item:hover::after{
+    transform: scale(1);
+}
+
+
+
+.head{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.headCall,
+.namePag{
+    font-weight: bold;
+}
+.head a{
+    color: black;
+    text-decoration: none;
+}
+.container{
+    margin-bottom: 13px;
+}
+.container a{
+    padding:5px 5px 5px 5px ;
+    color: black;
+    text-decoration: none;
+}
+.callTel a:hover{
+    padding:5px 5px 5px 5px ;
+    background-color: rgb(155, 141, 14);
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+}
+.callTel .mail,
+.phone{
+    margin-right: 50px;
+    background-color: rgb(155, 141, 14);
+    border-radius: 20px;
+}
+.callTel img{
+    max-width: 40px;
+    margin-right: 4px;
+}
+.parent{
+    position:relative;
+    border:0 solid red;
+    width: 33%;
+    min-width:320px;
+}
+
+.parent img{
+    display:block;
+    width:100%;
+}
+
+.parent div{
+    position:absolute;
+    width:100%;
+    left:0;
+    bottom:0px;
+    color:#fff;
+    padding:10px 0;
+    border-top: 1px solid rgb(49, 47, 47);
+    background: rgba(102, 100, 100, 0.74);
+    text-align: center
+}
+.parent div:hover{
+    position:absolute;
+    width:100%;
+    left:0;
+    bottom:0px;
+    color:#fff;
+    padding:10px 0;
+    transition: all 0.1s;
+    border-top: 1px solid rgb(49, 47, 47);
+    background: rgba(41, 40, 40, 0.822);
+    text-align: center
+}
+.parent h3{
+    position:absolute;
+    width:100%;
+    top: 3px;
+    color:rgb(49, 47, 47);
+    padding:10px 0;
+    background: rgba(255, 0, 0, 0);
+    text-align: center;
+}
+.parent p{
+    position:absolute;
+    width:100%;
+    left:3px;
+    top: 50px;
+    color:rgb(49, 47, 47);
+    padding:10px 0;
+    padding-left: 25px;
+    background: rgba(102, 100, 100, 0);
+    text-align: left;
+}
+.parent span{
+    position:absolute;
+    width:100%;
+    left:3px;
+    top: 70px;
+    color:rgb(49, 47, 47);
+    padding:10px 0;
+    padding-left: 25px;
+    background: rgba(255, 0, 0, 0);
+    text-align: left;
+}
+.parent .textFirst{
+    position:absolute;
+    width:100%;
+    left:3px;
+    top: 90px;
+    color:rgb(49, 47, 47);
+    padding:10px 0;
+    padding-left: 25px;
+    background: rgba(255, 0, 0, 0);
+    text-align: left;
+}
+.container .row{
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+.midCallLink{
+}
+.LogoStocks{
+    margin-left: 35px;
+    text-align: center;
+    border-top: 3px solid rgba(128, 128, 128, 0.37) ;
+    border-right: 1px solid rgba(128, 128, 128, 0.192);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.356);
+    border-left: 1px solid rgba(128, 128, 128, 0.192);
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+.LogoStocks:hover{
+    margin-left: 35px;
+    text-align: center;
+    transition: all 0.3s;
+    border-top: 3px solid rgb(207, 161, 9) ;
+    border-right: 1px solid rgba(128, 128, 128, 0);
+    border-bottom: 1px solid rgba(128, 128, 128, 0);
+    border-left: 1px solid rgba(128, 128, 128, 0);
+    width: 200px;
+    height: 200px;
+} 
+.st{
+    width: 150px;
+    max-height: 150px;
+    margin: 5px 10px 5px 10px;
+}
+.write{
+    
+    margin-left: 15px;
+    text-align: center
+}
+.wa{
+    
+    width: 150px;
+    max-height: 150px;
+    margin:5px 5px 5px 5px ;
+}
+.midInfo{
+    background: yellow;
+    font-size: 25px;
+    padding:5px 5px 5px 5px ;
+}
+.headInfo{
+    background: yellow;
+    font-size: 25px;
+    padding:5px 5px 5px 5px ;
+}
+.service{
+    padding:5px 5px 5px 5px ;
+    background-color: rgb(155, 141, 14);
+    border-radius: 20px;
+    
+    border: solid 1px gray;
+}
+.column .service {
+    color: black;
+
+}
+.serviceLink a{
+    color: black;
+}
+.serviceLink  a:hover{
+    color: white;
+    text-decoration:none;
+}
+.container p{
+    padding:5px 5px 5px 5px ;
+}
+.strong{
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+.lite{
+    text-align: center;
+    font-weight: lighter;
+    font-size: 20px;
+}
+.table{
+    text-align: center;
+    font-size: 20px;
+    font-weight: lighter;
+}
+.lii a{
+    padding:5px 5px 5px 5px ;
+    background-color: rgb(155, 141, 14);
+    border-radius: 20px;
+    color: white;
+}
+.lii a:hover{
+    padding:5px 5px 5px 5px ;
+    background-color: rgb(155, 141, 14);
+    border-radius: 20px;
+    border: solid 1px black;
+    color: black;
+}
+.l1{
+    padding:5px 5px 5px 5px ;
+    background-color: rgb(155, 141, 14);
+    border-radius: 20px;
+    border: solid 1px gray;
+    color: white;
+    margin-bottom: 22px;
+}
+.l2{
+    padding:5px 5px 5px 5px ;
+    background-color: rgb(155, 141, 14);
+    border-radius: 20px;
+    border: solid 1px gray;
+    color: white;
+    margin-bottom: 22px;
+}
+.none a{
+    color: blue;
+    font-weight: lighter;
+}
+.none a:hover{
+    text-decoration: underline;
+}
+.column .network{
+}
+.footer{
+    margin-top: 25px;
+    bottom: 0px;
+    background-color: #e8e8e8;
+    border-top:solid 1px rgba(0, 0, 0, 0.158);
+}
+.fotherText{
+text-align: end;
+}
+    </style>
+
+  </head>
+  <body>
+      <div class="headInfo">
+        <div class="container">
+            <div class="row justify-content-around">
+            <p class="headCall">+7 903-937-82-20</p>
+            <a class="namePag" href="#top">Грузоперевозки Новосибирск</a>       
+        </div>
+</div>
+</div>
+
+    <div class="container ">
+        <div class="row justify-content-center">
+        
+         <div class="callTel"> 
+        <img src="https://avatars.mds.yandex.net/get-pdb/3000514/5a4403f3-c702-46b4-b296-c8b45feaa8aa/s1200" alt="gjxnf"><a class=mail href="mailto:transautonsk@yandex.ru" target="_blank">transautonsk@yandex.ru</a>
+        
+        <img src="https://avatars.mds.yandex.net/get-pdb/2351799/1aa7d2fa-4d6b-469c-89f1-6247b680e6c5/s1200" alt="gjxnf"><a class="phone" href="tel:+79039378220">+7 903-937-82-20</a>
+        </div>
+        </div>
+        </div>
+    </div>
+    
+    <nav class="navbar navbar-expand-sm  sticky-top">
+        
+        <img class="navbar-brand" href="#" alt="">
+
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+              
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      Услуги
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="https://tap-link.github.io/testpage/">Заказ Газели</a>
+                      <a class="dropdown-item" href="#">Машины до 2 тонн</a>
+                      <a class="dropdown-item" href="#">Машины до 3 тонн</a>
+                      <a class="dropdown-item" href="#">Машины до 5 тонн</a>
+                      <a class="dropdown-item" href="#">Машины до 10 тонн</a>
+                      <a class="dropdown-item" href="#">Услуги грузчиков</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      Спецтехника
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Автокран 10 тонн</a>
+                        <a class="dropdown-item" href="#">Автокран 25 тонн</a>
+                        <a class="dropdown-item" href="#">Самогруз</a>
+                        <a class="dropdown-item" href="#">Эвакуатор</a>
+                    </div>
+                  </li>
+                 <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Вывоз
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Вывоз строительных материалов</a>
+                    <a class="dropdown-item" href="#">Вывоз металлолома</a>
+                    <a class="dropdown-item" href="#">Вывоз снега</a>
+                  </div>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Контакты</a>
+                </li>
+              </ul>
+
+          </div>
+
+    </nav>
+
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="parent">
+                    <img src="https://avatars.mds.yandex.net/get-pdb/2820929/67773811-6a83-4e69-9747-3e88b05b5c4e/s1200" alt="">
+                    <h3>СПЕЦ.ТЕХНИКА</h3>
+                    <span class="textFirst"></span>
+                    <a href=""><div>УЗНАТЬ ПОДРОБНЕЕ</div></a>
+                </div>
+                <div class="parent">
+                    <img src="https://avatars.mds.yandex.net/get-pdb/2799858/0d022edc-4d2d-40b0-ad88-f67ecf3e77d2/s1200" alt="">
+                    <a href="https://tap-link.github.io/testpage/"><div>УЗНАТЬ ПОДРОБНЕЕ</div></a>
+                    <h3>ЗАКАЗ ГАЗЕЛИ</h3>
+                    <p>ГАЗЕЛИ - Цены от 2500 рублей</p>
+                    <span class="textFirst"></span>
+                </div>
+                <div class="parent">
+                    <img src="https://avatars.mds.yandex.net/get-pdb/2407118/6e18438a-31c1-4e46-a96c-60860f1a937a/s1200" alt="">
+                    <h3>ВЫВОЗ МУСОРА</h3>
+                    <p></p>
+                    <span class="textFirst"></span>
+                    <span></span>
+                    <a href=""><div>УЗНАТЬ ПОДРОБНЕЕ</div></a>
+                </div>
+            </div>
+        </div>
+</nav>
+        <div class="container">
+            <div class="row">
+                
+                    <p class="infoText"><strong>Грузоперевозки в Новосибирске!</strong><br>Мы занимаемся перевозкой грузов по городу Новосибирску и НСО. <br>Кроме того, мы можем предложить выгодные междугородние<br> автомобильные перевозки по городам РФ.</p>
+               
+                    <div class="midCallLink">
+                    <div class="row">
+                        
+                        <a class="LogoStocks" href=""><img class="st" src="https://avatars.mds.yandex.net/get-pdb/2932440/7d43782c-69df-4630-a609-63f8f947392d/s1200" alt="Logo Stocks"><p>Акции</p></a>
+                        <a class="LogoStocks" href="https://wa.me/79039378220"><img class="wa" src="https://avatars.mds.yandex.net/get-pdb/2730537/6e64f59d-094d-4c04-a8b1-45283d08a5b1/s1200" alt="write"><p>Написать нам</p></a>
+                    
+                    </div>
+                </div>
+                <p class="infoText"><strong>На нашем сайте вы сможите найти всю <br>интересующую вас информацию<br>и связаться с нами для заказа услцги.</strong></p>
+            </div>
+        </div>
+
+        <div class="midInfo">
+            <div class="container">
+                <div class="column">
+                    <p>Наша компания предоставляет услуги газели и грузового транспорта уже более 10 лет.</p>
+                <div class="serviceLink">
+                    <a class="service" href="">Полный список услуг</a>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <p class="strong">Заказывая грузоперевозки на газели или других машинах, вы получаете:</p>
+            <p class="lite">Быструю подачу машины 15-30 минут<br>
+                Прозрачность формирования цены на заказываемую услугу<br>
+                Строгое соблюдение сроков доставки<br>
+                Технически исправный транспорт (чистый салон и кузов);<br>
+                Аккуратность грузчиков при погрузке и выгрузке груза.
+            </p>
+            <p class="strong">Перевозки грузов.</p>
+            <p class="lite">У нас вы можете заказать Газель как обычную,так и Газель удлинённую.<br> Грузоперевозки на Газели до 1.5 тонн идеальны в
+                условиях города. Их небольшой размер и маневренность делает<br> возможным заезд в узкие улочки и дворы, а парковка
+                не станет проблемой. На подобные машины не распространяются запреты, на движение грузового автотранспорта в городе.
+                На шасси Газели можно поставить: <br>как тент, так и фургон, будку, рефрижиратор, фермер, бортовые для перевозки грузов с верхней погрузкой.
+            </p>
+        </div>
+        
+        <div class="container-fluid">
+            <div class="table-responsive-sm">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th >Тип кузова автомобиля</th>
+                        <th >Объем кузова м3</th>
+                        <th >Мин/время/час</th>
+                        <th >Стоимость 1ч/руб</th>
+                        <th >Стоимость 1км/руб</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td scope="row"><a href="">Газель тент</td>
+                        <td>8 – 10</td>
+                        <td>2</td>
+                        <td>450</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td scope="row"><a href="">Газель фургон</td>
+                        <td>8 – 10</td>
+                        <td>2</td>
+                        <td>500</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td scope="row"><a href="">Газель термос</td>
+                        <td>8 – 10</td>
+                        <td>2</td>
+                        <td>500</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td scope="row"><a href="">Газель высокая 1.8м и выше</td>
+                        <td>10 - 15</td>
+                        <td>2</td>
+                        <td>550</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td scope="row"><a href="">Газель фермер</td>
+                        <td>8 – 10</td>
+                        <td>2</td>
+                        <td>600</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td scope="row"><a href="">Газель рефрижератор</td>
+                        <td>-</td>
+                        <td>2</td>
+                        <td>600</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td scope="row"><a href="">Газель пирамида</td>
+                        <td>8 – 10</td>
+                        <td>2</td>
+                        <td>650</td>
+                        <td>16</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</div>
+        <div class="container">
+            <p class="lite">У нас вы можете заказать любую Газель для грузоперевозок по Новосибирску.</p>
+            <p class="strong">Грузоперевозки на Газели до 1.5 тонн идеальны в условиях города.</p>
+            <p class="lite">Их небольшой размер и маневренность делает возможным заезд в узкие улочки и дворы, а парковка не станет проблемой.</p>
+            <p class="lite"><i>Заказ Газели в Новосибирске круглосуточно город-межгород.</i><br>
+                Работаем только на личном транспорте без посредников.
+            </p>
+            <div class="lii">
+                <div class="row justify-content-center">
+                    <a class="l1" href="">Грузоперевозки на газели дополнительгная информация об авто</a>
+                </div>    
+                    <p class="lite">Автомобили "Газель" относятся к классу N1 (М2) с разрешённой максимальной массой, не превышающей 3500 кг,<br>
+                        что позволяет управлять ими при наличии водительских прав «легковой» категории «В»;<br>
+                        также на газели не распространяется ограничение знака 3.4 «Движение грузовых автомобилей запрещено»
+                    </p>
+                <div class="row justify-content-center">
+                    <a class="l2" href="">Существует удлинённый вариант автомобиля - это "газель-фермер"</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <div class="lowTextInfo">
+                <p class="lowInfo"><strong>Грузоперевозки Новосибирск</strong></p>
+                <p>Грузоперевозки Новосибирск и НСО,<br> 
+                    а также Междугородние перевозки по городам РФ.<br>
+                     Доставка товаров, перевозки строительных<br>
+                      материалов, продуктов питания и т.д.<br>
+                    Можем перевезти любой груз в соответствии<br>
+                     с требованиями транспортировки.</p>
+                   </div>  
+                </div>
+                <div class="column">
+                    <div class="none">
+                    <p class="lowInfo"><strong>Заказать</strong></p>
+                    <p><a href="https://tap-link.github.io/testpage/">Газель</a></p>
+                    <p><a href="">Двухтонник</a></p>
+                    <p><a href="">Трехтонник</a></p>
+                    <p><a href="">Пятитонник</a></p>
+                    <p><a href="">Десятитонник</a></p>
+                    <p><a href="">Автокран 10 тонн</a></p>
+                    <p><a href="">Автокран 25 тонн</a></p>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="none">
+                    <p class="lowInfo"><strong>Услуги</p></strong>
+                    <p><a href="">Вывоз металлолома</a></p>
+                    <p><a href="">Вывоз мусора</a></p>
+                    <p><a href="">Вывоз снега</a></p>
+                    <p><a href="">Эвакуаторы</a></p>
+                    <p><a href="">Самогрузы</a></p>
+                    <p><a href="">Грузчики</a></p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="none">
+                        <div class="network">
+                    <p class="lowInfo"><strong>Контакты</p></strong>
+                    <p><a href="https://vk.com/transautonsk" target="_blank">ВКонтакте</a></p>
+                    <p>+7 903-937-82-20</p>
+                    <p>transautonsk@yandex.ru</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+            
+
+        <footer id="footer" class="footer"><!--Footer-->
+            <div class="d-sm-flex">
+                <div class="container">
+                <p class="fotherText"><a href="">by timurkononov</a>© 2020<br>
+                Грузоперевозки Новосибирск</p>
+                </div>
+            </div>
+        </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+
